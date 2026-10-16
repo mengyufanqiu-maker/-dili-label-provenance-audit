@@ -112,7 +112,7 @@ ax.text(0.05, -0.045, "n = 49 reclassified drugs. Zero defined-class downgrades.
         ha="left", va="center", fontsize=8, color=MUT, transform=ax.transAxes)
 
 fig.savefig(os.path.join(OUT, "fig1_reclassification_directions.png"),
-            dpi=300, bbox_inches="tight", facecolor=SURF)
+            dpi=330, bbox_inches="tight", facecolor=SURF)
 plt.close(fig)
 
 # ----------------------------------------------------------------------
@@ -177,7 +177,7 @@ flow_box(0.525, -0.075, 0.445, 0.097, "ambiguous: 80 neg. / 30 pos.",
          fill=GRAY_FILL)
 
 fig.savefig(os.path.join(OUT, "fig2_cross_source_filtering.png"),
-            dpi=300, bbox_inches="tight", facecolor=SURF)
+            dpi=330, bbox_inches="tight", facecolor=SURF)
 plt.close(fig)
 
 # flatten to RGB for print compatibility (journals prefer non-alpha PNGs)
