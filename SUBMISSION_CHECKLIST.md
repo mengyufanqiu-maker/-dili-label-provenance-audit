@@ -7,7 +7,7 @@ Cover letter 草稿：`submission/cover_letter_draft.md`（**本机保存，勿�
 
 ## 投稿前必做（作者本人）
 
-1. **补作者信息块**：打开 `submission/manuscript.docx`，在标题下加：作者姓名（张羽）、单位（学校/机构全称 + 城市 + 国家）、通讯作者邮箱（mengyufanqiu@gmail.com）、ORCID（如无可不填）。所有作者需确认署名。
+1. ~~补作者信息块~~ **已完成**：Yu Zhang，Clinical Pharmacy Program, School of Pharmacy, Anhui Medical University, Hefei, Anhui, China；通讯邮箱 mengyufanqiu@gmail.com。投稿前由作者最终确认署名与作者顺序（单一作者）。
 2. **核对官方 Guide for Authors**（投稿系统内也会显示）：确认稿件类型（Original research 还是 Short Communication——若后者存在且篇幅合适则优先）与字数限制；摘要结构已按 Background/Methods/Results/Conclusions 写好，可直接用。
 3. **AI 使用披露**（Elsevier 2026 政策：实质性参与稿件准备的生成式 AI 须披露；参与研究设计/方法/解释的还应在正文 Methods 说明——正文已加 "Generative AI use" 段）。提交系统粘贴版：
    > "Generative AI (Claude, Anthropic) was used in the preparation of this manuscript: research positioning and literature-review assistance; drafting and iterative revision of the manuscript text across multiple versions, including argument restructuring and language editing; and generation and debugging of the reproduction and analysis code. All data, numerical results, and analyses were produced and verified by the authors' own scripts against local data and public sources; every claim in the final manuscript was reviewed by the authors, who take full responsibility for the content. No generative-AI output was used as a source of data or as a claim of fact without author verification."

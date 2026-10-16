@@ -1,5 +1,11 @@
 # Version drift and source-dependent binary labeling of ambiguous drugs in a drug-induced liver injury benchmark: a provenance audit
 
+Yu Zhang
+
+Clinical Pharmacy Program, School of Pharmacy, Anhui Medical University, Hefei, Anhui, China
+
+Correspondence: mengyufanqiu@gmail.com
+
 
 ## Abstract
 
@@ -121,6 +127,10 @@ Our findings are complementary to, and deliberately narrower than, i-DILI [4], w
 **Limitations.** (i) Structure bridging is InChIKey-based; the mapping pass stored no SMILES, so a SMILES-level cross-check was unavailable, and 13 of 28 in-Seal matches are InChIKey14-only (Seal stores `-UHFFFAOYSA-`), so their stereo identity is unverified; the Tier-A column of Table 4 bounds the effect of this choice. (ii) One in-Seal reclassified drug (tretinoin) shares a skeleton InChIKey with another DILIrank drug and cannot be uniquely attributed. (iii) Only 559 of the 990 DILIst-sourced rows and 89 of the 121 "CP Overlap"-sourced rows could be matched to a DILIrank-1.0 class, so the benchmark agreement matrix covers the matched subset; the 431 and 32 outside rows are outside the audit by construction. In the full-DILIst comparison, 443 of 1,279 DILIst drugs fall outside DILIrank 1.0 (352 with structure, 91 without a PubChem record) and carry no comparable class. (iv) The prediction-level evidence is descriptive only: 5 held-out reclassified drugs (2 under strict matching; Table S1) and 23 training-set reclassified drugs with out-of-fold predictions computed under the published pipeline's cross-validation convention, in which model selection used all training labels (disclosed rather than leakage-free; Table S2). The two groups are reported separately, are not pooled, and support no inferential claims. (v) We did not verify that DILIrank-1.0 labels themselves are "correct" against primary literature; we characterize *agreement between sources and versions*, not ground truth. (vi) The upstream selection and binarization rule of the "CP Overlap" subset is not documented in the benchmark's public repository; its label policy is characterized here empirically (30/30 matched ambiguous compounds positive) rather than from a stated rule. (vii) The non-ambiguous same-drug agreement is reported as construction-consistent because DILIst was built on top of DILIrank; **independence of the two sources is not demonstrated** anywhere in this audit, and the cause of the benchmark-vs-official discrepancies (armodafinil, tretinoin) is not attributed. (viii) The non-ambiguous non-agreeing case (norgestrel/levonorgestrel) and one ambiguous-positive case (zopiclone/eszopiclone) involve racemate/enantiomer pairs whose identity resolution depends on the PubChem records used; the DILIst-internal label opposition within each pair is verifiable directly from the official workbook, neither is presented as a same-structure cross-source conflict, and the zopiclone match is skeleton-level only and not claimed as confirmed same-drug evidence.
 
 **Benchmark-hygiene recommendation.** When compiling or reusing a DILI benchmark: keep the ambiguous class as a third state (or an explicit exclusion flag with a recorded direction), report per-drug label provenance, re-check version alignment before reporting model performance, and audit the shipped labels against the benchmark's stated label policy, recording any undocumented upstream binarization steps (here: the "CP Overlap" subset, whose rule is not documented in the repository) and any divergence between the shipped snapshot and the official source dataset it names (here: armodafinil and tretinoin). These are inexpensive steps that prevent label instability from being mistaken for model error.
+
+## Declarations
+
+Declarations of interest: none. Funding: none. This study used only public datasets and previously published data; no ethical approval was required.
 
 ## Data availability
 
