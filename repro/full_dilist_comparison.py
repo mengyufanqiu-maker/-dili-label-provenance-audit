@@ -170,54 +170,58 @@ def main():
     # lookup: round 0 = full name, rounds 1-2 = salt-stripped variants;
     # per-name GET (threaded) for name->CID, aligned batch POST for CID->InChIKey
     from concurrent.futures import ThreadPoolExecutor
-    pending = list(missing)
-    found = {}   # name -> (variant, cid)
-    for rnd in range(3):
-        if not pending:
-            break
-        req = []
-        for n in pending:
-            vl = variant_list(n)
-            req.append((n, vl[rnd] if rnd < len(vl) else vl[-1]))
-        still = []
-        with ThreadPoolExecutor(max_workers=8) as ex:
-            cids = list(ex.map(pubchem_cid_by_name, [v for (_, v) in req]))
-        for (n, v), cid in zip(req, cids):
-            if cid:
-                found[n] = (v, cid)
-            else:
-                still.append(n)
-        print(f"  round {rnd}: {len(pending) - len(still)} found, {len(still)} remaining",
+    nohit = []
+    if missing:
+        pending = list(missing)
+        found = {}   # name -> (variant, cid)
+        for rnd in range(3):
+            if not pending:
+                break
+            req = []
+            for n in pending:
+                vl = variant_list(n)
+                req.append((n, vl[rnd] if rnd < len(vl) else vl[-1]))
+            still = []
+            with ThreadPoolExecutor(max_workers=8) as ex:
+                cids = list(ex.map(pubchem_cid_by_name, [v for (_, v) in req]))
+            for (n, v), cid in zip(req, cids):
+                if cid:
+                    found[n] = (v, cid)
+                else:
+                    still.append(n)
+            print(f"  round {rnd}: {len(pending) - len(still)} found, {len(still)} remaining",
+                  flush=True)
+            pending = still
+
+        prop_rows = []
+        cids = []
+        names_by_cid = {}
+        for n, (v, cid) in found.items():
+            names_by_cid.setdefault(cid, []).append(n)
+            cids.append(cid)
+        for cs in range(0, len(cids), 100):
+            chunk = cids[cs:cs + 100]
+            props = pubchem_props_by_cids(chunk)
+            cid2ik = {p.get("CID"): p.get("InChIKey") for p in props}
+            for cid in chunk:
+                ik = cid2ik.get(cid)
+                for n in names_by_cid[cid]:
+                    prop_rows.append({
+                        "query_name": n, "lookup_variant": found[n][0], "cid": cid,
+                        "inchikey": ik,
+                        "inchikey14": ik.split("-")[0] if ik else None,
+                    })
+            time.sleep(0.3)
+
+        new = pd.DataFrame(prop_rows, columns=["query_name", "lookup_variant", "cid",
+                                               "inchikey", "inchikey14"])
+        nohit = pending
+        new.to_csv(NEW_CSV, index=False)
+        pd.DataFrame({"query_name": nohit}).to_csv(NEW_CSV.replace(".csv", "_nohit.csv"), index=False)
+        print(f"new lookups: {len(new)} rows | no-hit after 3 variant rounds: {len(nohit)}",
               flush=True)
-        pending = still
-
-    prop_rows = []
-    cids = []
-    names_by_cid = {}
-    for n, (v, cid) in found.items():
-        names_by_cid.setdefault(cid, []).append(n)
-        cids.append(cid)
-    for cs in range(0, len(cids), 100):
-        chunk = cids[cs:cs + 100]
-        props = pubchem_props_by_cids(chunk)
-        cid2ik = {p.get("CID"): p.get("InChIKey") for p in props}
-        for cid in chunk:
-            ik = cid2ik.get(cid)
-            for n in names_by_cid[cid]:
-                prop_rows.append({
-                    "query_name": n, "lookup_variant": found[n][0], "cid": cid,
-                    "inchikey": ik,
-                    "inchikey14": ik.split("-")[0] if ik else None,
-                })
-        time.sleep(0.3)
-
-    new = pd.DataFrame(prop_rows, columns=["query_name", "lookup_variant", "cid",
-                                           "inchikey", "inchikey14"])
-    nohit = pending
-    new.to_csv(NEW_CSV, index=False)
-    pd.DataFrame({"query_name": nohit}).to_csv(NEW_CSV.replace(".csv", "_nohit.csv"), index=False)
-    print(f"new lookups: {len(new)} rows | no-hit after 3 variant rounds: {len(nohit)}",
-          flush=True)
+    else:
+        print("no new lookups needed (resuming from committed lookup CSVs)", flush=True)
 
     # ---- per-name keys ----
     name_keys = {}   # name_n -> (set full, set ik14)
