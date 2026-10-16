@@ -20,17 +20,30 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 # Raw inputs: point DILI_RAW_INPUTS at the directory holding data/, repo/, d2_pilot/
 # (the author's project root), or place them under <repo>/raw_inputs/ (default).
 INPUT_BASE = os.environ.get("DILI_RAW_INPUTS", os.path.join(ROOT, "raw_inputs"))
-WORKBOOK = os.path.join(INPUT_BASE, "data", "DILIrank_FDA_official_both_versions.xlsx")
-SHARDS = [
-    os.path.join(INPUT_BASE, "data", "mapping", "pubchem_candidates_full_s0_e260.csv"),
-    os.path.join(INPUT_BASE, "data", "mapping", "pubchem_candidates_full_s260_e520.csv"),
-    os.path.join(INPUT_BASE, "data", "mapping", "pubchem_candidates_full_s520_e780.csv"),
-    os.path.join(INPUT_BASE, "data", "mapping", "pubchem_candidates_full_s780_e1036.csv"),
-]
-GOLD = os.path.join(INPUT_BASE, "repo", "data", "DILI_Goldstandard_1111.csv")
-TRAIN = os.path.join(INPUT_BASE, "repo", "test_data_ncv_DILIst_888.csv")
-HELD = os.path.join(INPUT_BASE, "repo", "test_data_heldouttest_DILIst_223.csv")
-ALIGN = os.path.join(INPUT_BASE, "d2_pilot", "D2_label_stability_alignment.csv")
+
+
+def resolve(base_rel, repo_rel):
+    """Input path: raw-inputs copy first, repo-bundled copy as fallback."""
+    p = os.path.join(INPUT_BASE, base_rel)
+    if not os.path.exists(p) and repo_rel:
+        q = os.path.join(ROOT, repo_rel)
+        if os.path.exists(q):
+            return q
+    return p
+
+
+WORKBOOK = resolve(os.path.join("data", "DILIrank_FDA_official_both_versions.xlsx"), None)
+_SHARD_NAMES = ["pubchem_candidates_full_s0_e260.csv",
+                "pubchem_candidates_full_s260_e520.csv",
+                "pubchem_candidates_full_s520_e780.csv",
+                "pubchem_candidates_full_s780_e1036.csv"]
+SHARDS = [resolve(os.path.join("data", "mapping", n), os.path.join("data", "mapping", n))
+          for n in _SHARD_NAMES]
+GOLD = resolve(os.path.join("repo", "data", "DILI_Goldstandard_1111.csv"), None)
+TRAIN = resolve(os.path.join("repo", "test_data_ncv_DILIst_888.csv"), None)
+HELD = resolve(os.path.join("repo", "test_data_heldouttest_DILIst_223.csv"), None)
+ALIGN = resolve(os.path.join("d2_pilot", "D2_label_stability_alignment.csv"),
+                os.path.join("data", "D2_label_stability_alignment.csv"))
 OUT = os.path.join(ROOT, "repro_outputs")
 os.makedirs(OUT, exist_ok=True)
 
