@@ -34,8 +34,9 @@ plt.rcParams.update({
     "axes.edgecolor": GRAY_LINE,
 })
 
-OUT = r"C:\Users\15446\k-dense-byok\projects\dili_project\figures"
 import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
+OUT = os.path.join(ROOT, "figures")
 os.makedirs(OUT, exist_ok=True)
 
 
@@ -83,8 +84,8 @@ for (name, sub), y in zip(left, ly):
     box(ax, 0.03, y, 0.17, 0.13, name, sub,
         fill=GRAY_FILL if faded else SURF, lw=1.0)
 # right column (DILIrank 2.0)
-box(ax, 0.80, 0.86, 0.17, 0.13, "most", "+4")
-box(ax, 0.80, 0.66, 0.17, 0.13, "less", "+45")
+box(ax, 0.80, 0.86, 0.17, 0.13, "most", "4 reclassified in")
+box(ax, 0.80, 0.66, 0.17, 0.13, "less", "45 reclassified in")
 box(ax, 0.80, 0.46, 0.17, 0.13, "no", "0 reclassified", fill=GRAY_FILL)
 
 # arrows (exits/entries on box edges)
@@ -147,8 +148,8 @@ down_arrow(0.50, 0.790, 0.750)
 flow_box(0.15, 0.675, 0.70, 0.075, "InChIKey14 hits in the Seal et al. gold standard",
          "112 raw hits (93 in the 888-compound training set / 19 in the 223-compound held-out set)")
 down_arrow(0.50, 0.675, 0.635)
-flow_box(0.15, 0.545, 0.70, 0.09, "exclude 4 identity-conflict rows (MULTI)",
-         "amphet./dextroamphet., armodafinil/modafinil, tretinoin/isotretinoin, ofloxacin/levofloxacin",
+flow_box(0.15, 0.545, 0.70, 0.09, "exclude 2 identity-conflict hits (MULTI)",
+         "armodafinil/modafinil, tretinoin/isotretinoin (2 of 4 conflict rows overall; the other 2 involve non-ambiguous classes)",
          fill=GRAY_FILL, lw=1.0)
 down_arrow(0.50, 0.545, 0.505)
 flow_box(0.03, 0.415, 0.445, 0.09, "DILIst-sourced channel",

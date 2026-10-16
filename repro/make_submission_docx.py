@@ -13,10 +13,10 @@ import re
 from docx import Document
 from docx.shared import Pt
 
-ROOT = r"C:\Users\15446\k-dense-byok\projects\dili_project"
-MAIN_MD = os.path.join(ROOT, "DILI_LABEL_STABILITY_DATA_NOTE_v0.5.md")
-SI_MD = os.path.join(ROOT, "DILI_LABEL_STABILITY_DATA_NOTE_v0.4_SI.md")
-OUT_DIR = os.path.join(ROOT, "submission")
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
+MAIN_MD = os.path.join(ROOT, "manuscript", "DILI_LABEL_STABILITY_DATA_NOTE_v0.5.md")
+SI_MD = os.path.join(ROOT, "manuscript", "DILI_LABEL_STABILITY_DATA_NOTE_v0.5_SI.md")
+OUT_DIR = os.path.join(ROOT, "submission_docx")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 TOKEN = re.compile(r"(\*\*.+?\*\*|\*[^*\n]+?\*)")

@@ -21,7 +21,7 @@ No model was trained or re-run; no label was modified.
 | Path | What it is |
 |---|---|
 | `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v0.5.md` | Main manuscript (research note / data note) |
-| `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v0.4_SI.md` | Supplementary Information (Table S1: five held-out reclassified drugs) |
+| `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v0.5_SI.md` | Supplementary Information (Table S1: five held-out reclassified drugs) |
 | `repro/generate_analysis.py` | Reproduces Tables 1–4 from raw inputs (Python 3.10, pandas) |
 | `repro/make_figures.py` | Generates Figures 1–2 (matplotlib) |
 | `repro/README.md` | Reproduction instructions: input sources, run commands, expected outputs |
@@ -37,6 +37,11 @@ and sha256 checksums are in `repro/README.md` and `repro_outputs/INPUT_MANIFEST.
 
 ## Status
 
-Draft — not yet submission-ready. Target journals under consideration:
-Computational Toxicology; Journal of Cheminformatics (Data note);
-JCIM (Application Notes). License to be added before submission.
+Draft — not yet submission-ready. Target journal under consideration:
+Computational Toxicology (short communication route), with Journal of
+Cheminformatics (Data note) as second choice.
+
+## License
+
+Code (`repro/*.py`): MIT (see `LICENSE`).
+Data, tables, figures, and manuscript files: CC BY 4.0 (see `LICENSE-DATA.md`).
