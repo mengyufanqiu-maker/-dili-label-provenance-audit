@@ -21,7 +21,7 @@ No model was trained or re-run; no label was modified.
 | Path | What it is |
 |---|---|
 | `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v0.7.md` | Main manuscript (research note / data note) |
-| `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v0.5_SI.md` | Supplementary Information (Table S1: five held-out reclassified drugs) |
+| `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v0.6_SI.md` | Supplementary Information (Table S1: five held-out reclassified drugs) |
 | `repro/generate_analysis.py` | Reproduces Tables 1–4 from raw inputs (Python 3.10, pandas) |
 | `repro/make_figures.py` | Generates Figures 1–2 (matplotlib) |
 | `repro/README.md` | Reproduction instructions: input sources, run commands, expected outputs |
