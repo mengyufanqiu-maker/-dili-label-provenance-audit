@@ -14,14 +14,14 @@ channel, 30 positive via the DILIrank-derived "CP Overlap" channel, in the
 matched ambiguous subset); (iii) a three-tier match-stringency sensitivity
 analysis.
 
-No model was trained or re-run; no label was modified.
+No new predictive model was developed and no label was modified. Cross-validation-derived scores for the 23 reclassified training-set compounds (original pipeline convention, disclosed) are reported separately from the previously reproduced held-out predictions.
 
 ## Contents
 
 | Path | What it is |
 |---|---|
 | `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v1.0.md` | Main manuscript (research note / data note) |
-| `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v1.0_SI.md` | Supplementary Information (Table S1: five held-out reclassified drugs) |
+| `manuscript/DILI_LABEL_STABILITY_DATA_NOTE_v1.0_SI.md` | Supplementary Information (Tables S1–S3: held-out predictions, training-set cross-validation-derived predictions, and comparison with i-DILI) |
 | `repro/generate_analysis.py` | Reproduces Tables 1–4 from raw inputs (Python 3.10, pandas) |
 | `repro/make_figures.py` | Generates Figures 1–2 (matplotlib) |
 | `repro/README.md` | Reproduction instructions: input sources, run commands, expected outputs |
