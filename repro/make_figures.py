@@ -179,4 +179,11 @@ flow_box(0.525, -0.075, 0.445, 0.097, "ambiguous: 80 neg. / 30 pos.",
 fig.savefig(os.path.join(OUT, "fig2_cross_source_filtering.png"),
             dpi=300, bbox_inches="tight", facecolor=SURF)
 plt.close(fig)
+
+# flatten to RGB for print compatibility (journals prefer non-alpha PNGs)
+from PIL import Image
+for name in ["fig1_reclassification_directions.png", "fig2_cross_source_filtering.png"]:
+    p = os.path.join(OUT, name)
+    im = Image.open(p).convert("RGB")
+    im.save(p, dpi=(300, 300))
 print("figures written")
