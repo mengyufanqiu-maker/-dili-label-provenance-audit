@@ -1,0 +1,18 @@
+query_name,status,n_cids,cid,pubchem_iupac,canonical_smiles,inchikey,inchikey14,flags
+acetaminophen,ok,1,1983,N-(4-hydroxyphenyl)acetamide,,RZVAJINKPMORJF-UHFFFAOYSA-N,RZVAJINKPMORJF,
+mercaptopurine,ok,1,667490,"3,7-dihydropurine-6-thione",,GLVAUDGFNGKCSF-UHFFFAOYSA-N,GLVAUDGFNGKCSF,
+warfarin,ok,1,54678486,4-hydroxy-3-(3-oxo-1-phenylbutyl)chromen-2-one,,PJVWKTKQMONHTI-UHFFFAOYSA-N,PJVWKTKQMONHTI,
+abacavir sulfate,ok,1,441384,"bis([(1S,4R)-4-[2-amino-6-(cyclopropylamino)purin-9-yl]cyclopent-2-en-1-yl]methanol);sulfuric acid",,WMHSRBZIJNQHKT-FFKFEZPRSA-N,WMHSRBZIJNQHKT,salt_or_ester_name
+metoprolol succinate,ok,1,62937,butanedioic acid;bis(1-[4-(2-methoxyethyl)phenoxy]-3-(propan-2-ylamino)propan-2-ol),,RGHAZVBIOOEVQX-UHFFFAOYSA-N,RGHAZVBIOOEVQX,salt_or_ester_name
+divalproex sodium,ok,1,23663956,sodium;2-propylpentanoate;2-propylpentanoic acid,,MSRILKIQRXUYCT-UHFFFAOYSA-M,MSRILKIQRXUYCT,salt_or_ester_name;inorganic_or_ion
+dexchlorpheniramine,ok,1,33036,"(3S)-3-(4-chlorophenyl)-N,N-dimethyl-3-pyridin-2-ylpropan-1-amine",,SOYKEARSMXGVTM-HNNXBMFYSA-N,SOYKEARSMXGVTM,
+levocetirizine dihydrochloride,ok,1,9955977,2-[2-[4-[(R)-(4-chlorophenyl)-phenylmethyl]piperazin-1-yl]ethoxy]acetic acid;dihydrochloride,,PGLIUCLTXOYQMV-GHVWMZMZSA-N,PGLIUCLTXOYQMV,salt_or_ester_name;inorganic_or_ion
+norethindrone,ok,1,6230,"(8R,9S,10R,13S,14S,17R)-17-ethynyl-17-hydroxy-13-methyl-1,2,6,7,8,9,10,11,12,14,15,16-dodecahydrocyclopenta[a]phenanthren-3-one",,VIKNJXKGJWUCNN-XGXHKTLJSA-N,VIKNJXKGJWUCNN,
+norethindrone acetate,ok,1,5832,"[(8R,9S,10R,13S,14S,17R)-17-ethynyl-13-methyl-3-oxo-1,2,6,7,8,9,10,11,12,14,15,16-dodecahydrocyclopenta[a]phenanthren-17-yl] acetate",,IMONTRJLAWHYGT-ZCPXKWAGSA-N,IMONTRJLAWHYGT,salt_or_ester_name
+interferon alfa-2b,ok,1,71306834,"sodium;diiodomethanesulfonate;N-propyl-N-[2-(2,4,6-trichlorophenoxy)ethyl]imidazole-1-carboxamide",,MIXCUJKCXRNYFM-UHFFFAOYSA-M,MIXCUJKCXRNYFM,biologic
+sodium bicarbonate,ok,1,516892,sodium hydrogen carbonate,,UIIMBOGNXHQVGW-UHFFFAOYSA-M,UIIMBOGNXHQVGW,salt_or_ester_name;inorganic_or_ion
+ammonium chloride,ok,1,25517,azanium chloride,,NLXLAEXVIDQMFP-UHFFFAOYSA-N,NLXLAEXVIDQMFP,inorganic_or_ion
+cupric chloride,ok,1,24014,dichlorocopper,,ORTQZVOHEJQUHG-UHFFFAOYSA-L,ORTQZVOHEJQUHG,inorganic_or_ion
+"estrogens, conjugated",ok,1,45357473,"sodium [(13S)-13-methyl-17-oxo-7,8,9,11,12,14,15,16-octahydro-6H-cyclopenta[a]phenanthren-3-yl] sulfate",,VUCAHVBMSFIGAI-TWCWWGPMSA-M,VUCAHVBMSFIGAI,mixture_or_combo
+sterile water,ok,1,962,oxidane,,XLYOFNOQVPJJNP-UHFFFAOYSA-N,XLYOFNOQVPJJNP,inorganic_or_ion
+folic acid,ok,1,135398658,(2S)-2-[[4-[(2-amino-4-oxo-3H-pteridin-6-yl)methylamino]benzoyl]amino]pentanedioic acid,,OVBPIULPVIDEAO-LBPRGKRZSA-N,OVBPIULPVIDEAO,

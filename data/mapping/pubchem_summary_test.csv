@@ -1,0 +1,21 @@
+query_name,status,n_cids,flags
+acetaminophen,ok,1,
+mercaptopurine,ok,1,
+warfarin,ok,1,
+abacavir sulfate,ok,1,salt_or_ester_name
+metoprolol succinate,ok,1,salt_or_ester_name
+divalproex sodium,ok,1,salt_or_ester_name;inorganic_or_ion
+dexchlorpheniramine,ok,1,
+levocetirizine dihydrochloride,ok,1,salt_or_ester_name;inorganic_or_ion
+norethindrone,ok,1,
+norethindrone acetate,ok,1,salt_or_ester_name
+trastuzumab,no_cid,0,no_candidate;biologic
+interferon alfa-2b,ok,1,biologic
+botulinum toxin type a,no_cid,0,no_candidate;biologic
+sodium bicarbonate,ok,1,salt_or_ester_name;inorganic_or_ion
+ammonium chloride,ok,1,inorganic_or_ion
+cupric chloride,ok,1,inorganic_or_ion
+"estrogens, conjugated",ok,1,mixture_or_combo
+follitropin alfa/beta,no_cid,0,no_candidate;mixture_or_combo
+sterile water,ok,1,inorganic_or_ion
+folic acid,ok,1,
