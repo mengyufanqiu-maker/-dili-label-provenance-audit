@@ -147,5 +147,5 @@ The full per-drug match table (Tier B; all matched drugs with class, channel, to
 7. Liu A, et al. Machine-learning prediction of oral drug-induced liver injury (DILI) via multiple features and endpoints. *BioMed Res Int* 2020;2020:4795140. doi:10.1155/2020/4795140. PMID 32509859.
 8. Hoofnagle JH, Serrano J, Knoben JE, Navarro VJ. LiverTox: a website on drug-induced liver injury. *Hepatology* 2013;57(3):873–874. doi:10.1002/hep.26175. PMID 23456678.
 9. Evangelista D, et al. Machine learning-based models to predict drug-induced liver injury (DILI) to assist medicinal chemistry. *J Med Chem* 2026;69(13):14992–15008. doi:10.1021/acs.jmedchem.5c02888.
-10. Standardized toxicity data curation pipeline: a systematic evaluation of data quality control on QSAR model reproducibility and reliability. *Comput Toxicol* 2026;39:100444. doi:10.1016/j.comtox.2026.100444.
+10. Zhu W, Liu Y, Wang Y, Feng P. Standardized toxicity data curation pipeline: a systematic evaluation of data quality control on QSAR model reproducibility and reliability. *Comput Toxicol* 2026;39:100444. doi:10.1016/j.comtox.2026.100444.
 
