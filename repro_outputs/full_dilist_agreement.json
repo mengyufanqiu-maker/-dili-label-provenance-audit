@@ -1,0 +1,52 @@
+{
+  "tier_B_main": {
+    "matrix": {
+      "0": {
+        "ambiguous": 120,
+        "less": 0,
+        "most": 0,
+        "no": 263
+      },
+      "1": {
+        "ambiguous": 2,
+        "less": 267,
+        "most": 183,
+        "no": 1
+      }
+    },
+    "defined_agreement": "713/714",
+    "ambiguous_label_counts": {
+      "0": 120,
+      "1": 2
+    },
+    "ambiguous_n": 122,
+    "matched_n": 836,
+    "conflict_n": 0,
+    "no_match_n": 443
+  },
+  "tier_A_strict": {
+    "matrix": {
+      "0": {
+        "ambiguous": 120,
+        "less": 0,
+        "most": 0,
+        "no": 261
+      },
+      "1": {
+        "ambiguous": 1,
+        "less": 264,
+        "most": 182,
+        "no": 1
+      }
+    },
+    "defined_agreement": "707/708",
+    "ambiguous_label_counts": {
+      "0": 120,
+      "1": 1
+    },
+    "ambiguous_n": 121,
+    "matched_n": 829,
+    "conflict_n": 0,
+    "no_match_n": 450
+  }
+}

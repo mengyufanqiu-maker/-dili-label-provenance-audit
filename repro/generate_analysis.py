@@ -44,6 +44,7 @@ TRAIN = resolve(os.path.join("repo", "test_data_ncv_DILIst_888.csv"), None)
 HELD = resolve(os.path.join("repo", "test_data_heldouttest_DILIst_223.csv"), None)
 ALIGN = resolve(os.path.join("d2_pilot", "D2_label_stability_alignment.csv"),
                 os.path.join("data", "D2_label_stability_alignment.csv"))
+DILIST_XLSX = resolve(os.path.join("data", "DILIst_FDA_official.xlsx"), None)
 OUT = os.path.join(ROOT, "repro_outputs")
 os.makedirs(OUT, exist_ok=True)
 
@@ -52,6 +53,10 @@ SOURCES = {
         "FDA DILIrank 2.0 dataset page (official workbook): "
         "https://www.fda.gov/science-research/liver-toxicity-knowledge-base-ltkb/"
         "drug-induced-liver-injury-rank-dilirank-20-dataset",
+    "data/DILIst_FDA_official.xlsx":
+        "FDA DILIst dataset page (official workbook): "
+        "https://www.fda.gov/science-research/liver-toxicity-knowledge-base-ltkb/"
+        "drug-induced-liver-injury-severity-and-toxicity-dilist-dataset",
     "repo/data/DILI_Goldstandard_1111.csv":
         "Seal et al. public repository: https://github.com/srijitseal/DILI",
     "repo/test_data_ncv_DILIst_888.csv":
@@ -269,6 +274,7 @@ print()
 print("== Manifest ==")
 manifest_items = [
     ("data/DILIrank_FDA_official_both_versions.xlsx", WORKBOOK),
+    ("data/DILIst_FDA_official.xlsx", DILIST_XLSX),
 ] + [("data/mapping/" + n, s) for n, s in zip(_SHARD_NAMES, SHARDS)] + [
     ("repo/data/DILI_Goldstandard_1111.csv", GOLD),
     ("repo/test_data_ncv_DILIst_888.csv", TRAIN),

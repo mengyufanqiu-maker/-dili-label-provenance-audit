@@ -15,11 +15,16 @@ previously reproduced held-out probability vector (see "Prediction inputs").
 | Path | What it is |
 |---|---|
 | `generate_analysis.py` | Reproduces Tables 1–4; writes `repro_outputs/` (read-only w.r.t. inputs). Python 3.10 + pandas |
+| `full_dilist_comparison.py` | Full-DILIst × DILIrank-1.0 same-drug comparison (Table 5). Performs PubChem lookups for the 455 names not covered by the existing mapping (salt-stripped variants; threaded), with resume from the committed lookup CSVs — **re-runs offline from a fresh clone** |
 | `make_figures.py` | Generates `figures/fig1_*.png`, `fig2_*.png` (matplotlib; any recent Python 3) |
+| `make_submission_docx.py` | Converts the manuscript + SI markdown to Word (python-docx) |
 | `repro_outputs/full_match_table_tierB.csv` | Per-drug match table (Tier B): name, class, channel, toxicity, match tier, conflict flag |
 | `repro_outputs/table1_reclassification.csv` | The 49 reclassified drugs (v1 → v2 classes) |
-| `repro_outputs/sensitivity_summary.csv` | Tier A/B matched-row counts for Table 4 |
-| `repro_outputs/INPUT_MANIFEST.md` | Input paths, sizes, sha256 checksums |
+| `repro_outputs/sensitivity_summary.csv` | Tier A/B/C matched-row counts for Table 4 |
+| `repro_outputs/full_dilist_match_table.csv` | Full-DILIst per-drug match table (Table 5 source) |
+| `repro_outputs/full_dilist_agreement.json` | Full-DILIst agreement matrices (Tier A/B) |
+| `repro_outputs/pubchem_candidates_dilist_new*.csv` | PubChem lookups for the 455 additional DILIst names (resume inputs) |
+| `repro_outputs/INPUT_MANIFEST.md` | Input paths, sizes, sha256 checksums, sources |
 
 ## How to run
 
@@ -33,7 +38,11 @@ pip install pandas
 # 3. reproduce Tables 1-4
 python -I generate_analysis.py          # from the project root
 
-# 4. reproduce Figures 1-2 (separate env; matplotlib)
+# 4. reproduce Table 5 (full-DILIst same-drug comparison; offline — resumes
+#    from the committed lookup CSVs, no network needed in a fresh clone)
+python -I full_dilist_comparison.py
+
+# 5. reproduce Figures 1-2 (separate env; matplotlib)
 pip install matplotlib
 python -I make_figures.py
 ```
@@ -48,7 +57,8 @@ Tier B 559/89, 80/30, 476/476; Tier C 556/88), §3.3 (28 in-Seal; 14/13/1).
 | Input | Source |
 |---|---|
 | `data/DILIrank_FDA_official_both_versions.xlsx` | FDA DILIrank 2.0 dataset page — `fda.gov/science-research/liver-toxicity-knowledge-base-ltkb/drug-induced-liver-injury-rank-dilirank-20-dataset` (official workbook containing both version sheets) |
-| `data/mapping/pubchem_candidates_full_*.csv` | Our earlier PubChem PUG REST name-lookup pass (curl, CSV-quoted); re-generable via PUG REST, or shipped on request |
+| `data/DILIst_FDA_official.xlsx` | FDA DILIst dataset page — `fda.gov/science-research/liver-toxicity-knowledge-base-ltkb/drug-induced-liver-injury-severity-and-toxicity-dilist-dataset` |
+| `data/mapping/pubchem_candidates_full_*.csv` | Our earlier PubChem PUG REST name-lookup pass (curl, CSV-quoted); bundled in this repository |
 | `repo/data/DILI_Goldstandard_1111.csv`, split files | Seal et al. public repository — `github.com/srijitseal/DILI` (paper: Chem Res Toxicol 2024;37(8):1290–1305, doi:10.1021/acs.chemrestox.4c00015) |
 | Held-out probability vector + Youden threshold (0.6386) | Our earlier independent reproduction of the Seal et al. pipeline (AUC-PR 0.7875; verified against the authors' published predictions to floating-point precision); see `d2_pilot/D2_label_stability_alignment.csv` for the five held-out probabilities used in Table S1 |
 
