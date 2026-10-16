@@ -308,7 +308,8 @@ def main():
     tabA = tab.copy()
     tabA.loc[tabA.tier != "full", "match"] = "none"
     res["tier_A_strict"] = agreement(tabA)
-    with open(os.path.join(OUT, "full_dilist_agreement.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUT, "full_dilist_agreement.json"), "w", encoding="utf-8",
+              newline="\n") as f:
         json.dump(res, f, indent=2, default=str)
     print(json.dumps(res, indent=2, default=str))
 
