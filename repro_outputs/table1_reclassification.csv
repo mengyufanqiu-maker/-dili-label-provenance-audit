@@ -1,0 +1,50 @@
+LTKBID,Compound Name,Severity Class,Label Section,vDILIConcern,Version,cls_v1,name_v1,CompoundName,SeverityClass,LabelSection,vDILI-Concern,Comment,cls_v2,name_v2,removed,added
+LT00177,vinblastine,0.0,No match,No-DILI-Concern,2.0,no,vinblastine,Vinblastine sulfate,0,No match,vLess-DILI-concern,Revised,less,Vinblastine sulfate,False,False
+LT00181,lorazepam,3.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,lorazepam,Lorazepam,3,Warnings & precautions,vLess-DILI-concern,Revised,less,Lorazepam,False,False
+LT00183,raloxifene,0.0,No match,No-DILI-Concern,2.0,no,raloxifene,Raloxifene hydrochloride,0,No match,vLess-DILI-concern,Revised,less,Raloxifene hydrochloride,False,False
+LT00184,mifepristone,0.0,No match,No-DILI-Concern,2.0,no,mifepristone,Mifepristone,0,No match,vLess-DILI-concern,Revised,less,Mifepristone,False,False
+LT00230,diazepam,4.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,diazepam,Diazepam,4,Adverse reactions,vLess-DILI-concern,Revised,less,Diazepam,False,False
+LT00298,flurbiprofen,3.0,Warnings and precautions,Ambiguous DILI-concern,1.0,ambiguous,flurbiprofen,Flurbiprofen sodium,3,Warnings & precautions,vLess-DILI-concern,Revised,less,Flurbiprofen sodium,False,False
+LT00338,tretinoin,3.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,tretinoin,Tretinoin,3,Warnings & precautions,vLess-DILI-concern,Revised,less,Tretinoin,False,False
+LT00457,trifluoperazine,2.0,Warnings and precautions,Ambiguous DILI-concern,1.0,ambiguous,trifluoperazine,Trifluoperazine hydrochloride,2,Warnings & precautions,vLess-DILI-concern,Revised,less,Trifluoperazine hydrochloride,False,False
+LT00607,nilotinib,4.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,nilotinib,Nilotinib hydrochloride,4,Warnings & precautions,vMost-DILI-concern,Revised,most,Nilotinib hydrochloride,False,False
+LT00667,saxagliptin,0.0,No match,No-DILI-Concern,2.0,no,saxagliptin,Saxagliptin hydrochloride,0,No match,vLess-DILI-concern,Revised,less,Saxagliptin hydrochloride,False,False
+LT00670,fenofibric acid,2.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,fenofibric acid,Fenofibric acid,2,Warnings & precautions,vLess-DILI-concern,Revised,less,Fenofibric acid,False,False
+LT00822,mepivacaine,0.0,No match,No-DILI-Concern,2.0,no,mepivacaine,Mepivacaine hydrochloride,0,No match,vLess-DILI-concern,Revised,less,Mepivacaine hydrochloride,False,False
+LT00857,flavoxate,0.0,No match,No-DILI-Concern,1.0,no,flavoxate,Flavoxate hydrochloride,0,No match,vLess-DILI-concern,Revised,less,Flavoxate hydrochloride,False,False
+LT00881,colestipol,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,colestipol,Colestipol hydrochloride,3,Adverse reactions,vLess-DILI-concern,Revised,less,Colestipol hydrochloride,False,False
+LT00932,teriparatide,0.0,No match,No-DILI-Concern,2.0,no,teriparatide,Teriparatide acetate,0,No match,vLess-DILI-concern,Revised,less,Teriparatide acetate,False,False
+LT00979,oxycodone,0.0,No match,No-DILI-Concern,2.0,no,oxycodone,Oxycodone hydrochloride,0,No match,vLess-DILI-concern,Revised,less,Oxycodone hydrochloride,False,False
+LT00985,glatiramer acetate,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,glatiramer acetate,Glatiramer acetate,3,Adverse reactions,vLess-DILI-concern,Revised,less,Glatiramer acetate,False,False
+LT01011,tolterodine,0.0,No match,No-DILI-Concern,2.0,no,tolterodine,Tolterodine tartrate,0,No match,vLess-DILI-concern,Revised,less,Tolterodine tartrate,False,False
+LT01026,rizatriptan,0.0,No match,No-DILI-Concern,2.0,no,rizatriptan,Rizatriptan benzoate,0,No match,vLess-DILI-concern,Revised,less,Rizatriptan benzoate,False,False
+LT01040,dofetilide,0.0,No match,No-DILI-Concern,2.0,no,dofetilide,Dofetilide,0,No match,vLess-DILI-concern,Revised,less,Dofetilide,False,False
+LT01087,cefditoren,2.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,cefditoren,Cefditoren pivoxil,2,Adverse reactions,vLess-DILI-concern,Revised,less,Cefditoren pivoxil,False,False
+LT01102,olmesartan,4.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,olmesartan,Olmesartan medoxomil,4,Adverse reactions,vLess-DILI-concern,Revised,less,Olmesartan medoxomil,False,False
+LT01129,tadalafil,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,tadalafil,Tadalafil,3,Adverse reactions,vLess-DILI-concern,Revised,less,Tadalafil,False,False
+LT01143,aripiprazole,5.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,aripiprazole,Aripiprazole,5,Adverse reactions,vLess-DILI-concern,Revised,less,Aripiprazole,False,False
+LT01149,eplerenone,4.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,eplerenone,Eplerenone,4,Adverse reactions,vLess-DILI-concern,Revised,less,Eplerenone,False,False
+LT01156,ibandronate,0.0,No match,No-DILI-Concern,2.0,no,ibandronate,Ibandronate sodium,0,No match,vLess-DILI-concern,Revised,less,Ibandronate sodium,False,False
+LT01161,eszopiclone,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,eszopiclone,Eszopiclone,3,Adverse reactions,vLess-DILI-concern,Revised,less,Eszopiclone,False,False
+LT01173,cefixime,4.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,cefixime,Cefixime,4,Adverse reactions,vLess-DILI-concern,Revised,less,Cefixime,False,False
+LT01191,solifenacin,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,solifenacin,Solifenacin succinate,3,Adverse reactions,vLess-DILI-concern,Revised,less,Solifenacin succinate,False,False
+LT01203,anidulafungin,7.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,anidulafungin,Anidulafungin,7,Warnings & precautions,vMost-DILI-concern,Revised,most,Anidulafungin,False,False
+LT01222,tigecycline,8.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,tigecycline,Tigecycline,8,Warnings & precautions,vMost-DILI-concern,Revised,most,Tigecycline,False,False
+LT01224,cladribine,3.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,cladribine,Cladribine,3,Warnings & precautions,vLess-DILI-concern,Revised,less,Cladribine,False,False
+LT01252,paliperidone,0.0,No match,No-DILI-Concern,2.0,no,paliperidone,Paliperidone,0,No match,vLess-DILI-concern,Revised,less,Paliperidone,False,False
+LT01254,posaconazole,8.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,posaconazole,Posaconazole,8,Warnings & precautions,vMost-DILI-concern,Revised,most,Posaconazole,False,False
+LT01267,everolimus,4.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,everolimus,Everolimus,4,Adverse reactions,vLess-DILI-concern,Revised,less,Everolimus,False,False
+LT01313,doxazosin,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,doxazosin,Doxazosin mesylate,3,Adverse reactions,vLess-DILI-concern,Revised,less,Doxazosin mesylate,False,False
+LT01320,filgrastim,1.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,filgrastim,Filgrastim,1,Adverse reactions,vLess-DILI-concern,Revised,less,Filgrastim,False,False
+LT01364,alemtuzumab,0.0,No match,No-DILI-Concern,2.0,no,alemtuzumab,Alemtuzumab,0,No match,vLess-DILI-concern,Revised,less,Alemtuzumab,False,False
+LT01412,certolizumab pegol,4.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,certolizumab pegol,Certolizumab pegol,4,Adverse reactions,vLess-DILI-concern,Revised,less,Certolizumab pegol,False,False
+LT01414,eculizumab,0.0,No match,No-DILI-Concern,2.0,no,eculizumab,Eculizumab,0,No match,vLess-DILI-concern,Revised,less,Eculizumab,False,False
+LT01416,ustekinumab,0.0,No match,No-DILI-Concern,2.0,no,ustekinumab,Ustekinumab,0,No match,vLess-DILI-concern,Revised,less,Ustekinumab,False,False
+LT01730,ribavirin,7.0,Adverse reactions,Ambiguous DILI-concern,1.0,ambiguous,ribavirin,Ribavirin,7,Adverse reactions,vLess-DILI-concern,Revised,less,Ribavirin,False,False
+LT01827,tramadol,7.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,tramadol,Tramadol hydrochloride,7,Adverse reactions,vLess-DILI-concern,Revised,less,Tramadol hydrochloride,False,False
+LT02018,capecitabine,2.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,capecitabine,Capecitabine,2,Warnings & precautions,vLess-DILI-concern,Revised,less,Capecitabine,False,False
+LT02081,pyridostigmine,0.0,No match,No-DILI-Concern,2.0,no,pyridostigmine,Pyridostigmine bromide,0,No match,vLess-DILI-concern,Revised,less,Pyridostigmine bromide,False,False
+LT02084,oxybutynin,0.0,No match,No-DILI-Concern,1.0,no,oxybutynin,Oxybutynin chloride,0,No match,vLess-DILI-concern,Revised,less,Oxybutynin chloride,False,False
+LT02210,oseltamivir,3.0,Adverse reactions,Ambiguous DILI-concern,1.0,ambiguous,oseltamivir,Oseltamivir phosphate,3,Adverse reactions,vLess-DILI-concern,Revised,less,Oseltamivir phosphate,False,False
+LT02346,clindamycin-2-phosphate,3.0,Warnings and precautions,Ambiguous DILI-concern,2.0,ambiguous,clindamycin-2-phosphate,Clindamycin phosphate,3,Warnings & precautions,vLess-DILI-concern,Revised,less,Clindamycin phosphate,False,False
+LT02427,haloperidol decanoate,3.0,Adverse reactions,Ambiguous DILI-concern,2.0,ambiguous,haloperidol decanoate,Haloperidol decanoate,3,Adverse reactions,vLess-DILI-concern,Revised,less,Haloperidol decanoate,False,False
