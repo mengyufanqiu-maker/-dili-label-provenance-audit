@@ -14,8 +14,8 @@ from docx import Document
 from docx.shared import Pt
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
-MAIN_MD = os.path.join(ROOT, "manuscript", "DILI_LABEL_STABILITY_DATA_NOTE_v0.9.md")
-SI_MD = os.path.join(ROOT, "manuscript", "DILI_LABEL_STABILITY_DATA_NOTE_v0.8_SI.md")
+MAIN_MD = os.path.join(ROOT, "manuscript", "DILI_LABEL_STABILITY_DATA_NOTE_v1.0.md")
+SI_MD = os.path.join(ROOT, "manuscript", "DILI_LABEL_STABILITY_DATA_NOTE_v1.0_SI.md")
 OUT_DIR = os.path.join(ROOT, "submission_docx")
 os.makedirs(OUT_DIR, exist_ok=True)
 
